@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Spoiler System</title>
+  <style>
+    body {
+      color: #424242;
+      font-family: sans-serif;
+    }
+
+    .spoiler button {
+      background-color: #b9e937;
+      color: black;
+      border: 1px solid #00b906;
+      cursor: pointer;
+    }
+
+    .spoiler-content {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      opacity: 0;
+      overflow: hidden;
+      transition: opacity 0.5s;
+    }
+
+    .spoiler-content.visible {
+      display: inline;
+      width: auto;
+      height: auto;
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium alias blanditiis consequuntur cumque debitis distinctio id iste molestias nisi nostrum odit officia omnis praesentium, quo quod velit voluptatibus! Nobis, quis.</p>
+
+  <p class="spoiler">
+    He died at the end
+  </p>
+
+  <p>
+    <span>Lorem ipsum dolor sit amet, <span class="spoiler">consectetur adipisicing elit.</span> Accusamus at, autem, culpa eos facere facilis fugiat illum impedit maxime natus officia officiis omnis quas quasi quibusdam quos repellat ut voluptatem!</span>
+    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium adipisci corporis cupiditate doloremque dolores, <span class="spoiler">doloribus expedita</span> hic impedit ipsum magnam nulla numquam, omnis quibusdam, sit sunt tenetur unde? Explicabo, quaerat?</span>
+    <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A dignissimos odit porro quam! Ad amet cumque dolor ea earum <span class="spoiler">harum libero</span> minus odio, officia porro quas qui quidem tempore veritatis.</span>
+  </p>
+
+  <script src="spoiler.js"></script>
+</body>
+</html>
