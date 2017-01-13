@@ -46,14 +46,14 @@
         toShow.offsetWidth;
         toShow.classList.add('in');
         activeTab.removeEventListener('transitionend', transitionEnd);
-      }
+      };
 
       activeTab.addEventListener('transitionend', transitionEnd);
     } else {
       toShow.classList.add('active');
       activeTab.classList.remove('active');
     }
-  }
+  };
 
   const tabs = document.querySelectorAll('.tabs a');
 
@@ -77,7 +77,7 @@
     if (a !== null && !a.parentNode.classList.contains('active')) {
       showTabs(a, e !== undefined);
     }
-  }
+  };
 
   window.addEventListener('hashchange', hashChange);
   hashChange();
